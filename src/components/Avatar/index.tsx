@@ -1,19 +1,20 @@
 interface AvatarProps {
-  nickname: string,
-  realname: string
+  nickname: string;
+  realname: string;
 }
 
 function Avatar(props: AvatarProps) {
   return (
-    <div className='
+    <div
+      className="
       avatar__container 
       flex 
       flex-row
       items-center
       w-full
-      '>
-
-      <div className='avatar__photo mr-20'>
+      "
+    >
+      <div className="avatar__photo mr-20">
         <img
           className='
           rounded-full
@@ -29,24 +30,25 @@ function Avatar(props: AvatarProps) {
         />
       </div>
 
-      <div className='avatar__texts text-center justify-between'>
-
-        <div className='text__title'>
-          <h1>{props.nickname}</h1>
+      <div className="avatar__texts text-center justify-between">
+        <div className="text__title">
+          <h1 className="text-4xl bg-gray-300 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded">
+            {props.nickname}
+          </h1>
         </div>
 
-        <div className='text__name mt-3'>
-          <h2>{props.realname}</h2>
+        <div className="text__name mt-3">
+          <h2 className="text-4xl bg-gray-300 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded">
+            {props.realname}
+          </h2>
         </div>
 
-        <div className='text__follow'>
-          <button className='w-80 mt-5'>
+        <div className="text__follow">
+          <button className="w-80 mt-5 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
             Follow
           </button>
         </div>
-
       </div>
-
     </div>
   );
 }
